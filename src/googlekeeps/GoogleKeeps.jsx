@@ -8,32 +8,44 @@ import g from "./GoogleKeeps.css"
 
 export default function Keeps() {
 
-    const [arrnote,setArrnote] = useState([]);
+    const [arrnote, setArrnote] = useState([]);
 
     let addNote = (note) => {
         setArrnote((preData) => {
-            return [...preData,note]
+            return [...preData, note]
         })
     }
 
     let deleted = (id) => {
-        setArrnote((olditems) => { 
-            olditems.filter((index) => {
-                return index !== id;
+        setArrnote((olditems) => {
+            
+            return olditems.filter((element,index) => {
+                return index !== id    
             })
         })
     }
 
-    return(
+    let displayNotes = () => {
+        if(arrnote)
+                {
+                    arrnote.map((curvalue, index) => {
+                    return (<Notes title={curvalue.title} content={curvalue.content} key={index} id={index} onClick={deleted} />)
+                })
+    }
+}
+
+    return (
         <>
-            <Nav/>
-            <Mnotes main={addNote}/>
+            <Nav />
+            <Mnotes main={addNote} />
             <div className="notesDiv">
-                {arrnote.map((curvalue,index) => {
-                   return( <Notes title={curvalue.title} content={curvalue.content} key={index} id={index} onSelect={deleted}/>)
-                })}
+            {
+                    arrnote.map((curvalue, index) => {
+                    return (<Notes title={curvalue.title} content={curvalue.content} key={index} id={index} onClick={deleted} />)
+                })
+    }
             </div>
-            <Footer/>
+            <Footer />
         </>
     )
 }

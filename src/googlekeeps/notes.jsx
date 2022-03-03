@@ -7,7 +7,7 @@ export default function Notes(props) {
         <div className="notes">
             <h1>{props.title}</h1>
             <h4>{props.content}</h4>
-            <button onClick={() => {props.onSelect(props.id)}}><MdDelete/></button>
+            <button onClick={() => {props.onClick(props.id)}}><MdDelete/></button>
         </div>
     )
 }
