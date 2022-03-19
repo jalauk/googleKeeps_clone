@@ -1,0 +1,26 @@
+.icons{
+    font-size:24px;
+    color:rgb(85, 85, 85);
+    padding-left: 10px;
+    margin-bottom: 5px;
+}
+
+.text{
+    font-size: 14px;
+    font-weight: 500;
+    padding-left: 30px;
+}
+
+.sideelement{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left:12px;
+    height:48px;
+    width: 280px;
+    border-radius: 0 25px 25px 0;;
+}
+
+.sideelement:hover{
+    background-color: #feefc3;
+}

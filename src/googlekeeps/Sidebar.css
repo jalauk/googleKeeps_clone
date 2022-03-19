@@ -1,0 +1,9 @@
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.icon{
+    font-size: 26px;
+}
