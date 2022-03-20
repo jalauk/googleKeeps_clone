@@ -28,14 +28,19 @@ export default function Keeps() {
 
     return (
         <>
-            <Mnotes main={addNote} />
-            <div className="notesDiv">
-                {
-                    arrnote.map((curvalue, index) => {
-                        return (<Notes title={curvalue.title} content={curvalue.content} key={index} id={index} onClick={deleted} />)
-                    })
-                }
+            <div className="notesComponent">
+                <div className="mnotes">
+                    <Mnotes main={addNote} />
+                </div>
+                <div className="notesDiv">
+                    {
+                        arrnote.map((curvalue, index) => {
+                            return (<Notes title={curvalue.title} content={curvalue.content} key={index} id={index} onClick={deleted} />)
+                        })
+                    }
+                </div>
             </div>
+
         </>
     )
 }

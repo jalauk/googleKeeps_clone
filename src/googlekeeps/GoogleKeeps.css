@@ -2,6 +2,10 @@
     display: flex;
     flex-direction: row;
     margin:0px 20px 0px 20px;
-    justify-content: space-between;
     flex-wrap: wrap;
+}
+
+.notesComponent{
+    height:100vh;
+    width:100vw;
 }
